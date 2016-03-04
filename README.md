@@ -1,6 +1,6 @@
 # MailGrid
 
-Our new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) gret work!
+Our new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) great work!
 
 # Installation
 
