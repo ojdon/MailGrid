@@ -1,8 +1,6 @@
-# Gulp-Email-Creator
+# MailGrid
 
-Gulp Email Creator is a gulp workflow inspired by [Lee Munroe's](https://github.com/leemunroe) [grunt-email-design](https://github.com/leemunroe/grunt-email-design)  workflow.
-
-It aims to help speed up email template production by allowing you to use SCSS and inlining the generated CSS for you.
+Our new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) gret work!
 
 # Installation
 
@@ -53,4 +51,4 @@ In a few seconds/minutes, you'll see the test appear in Limus for you!
 
 #Contributing#
 
-Any contributions will be happily recieved. Just open an issue or make a pull request.
+Any contributions will be happily recieved. Just open an issue or make a pull request. However, please consider if your contributions would be more suitable upstream. 
