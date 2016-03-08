@@ -1,22 +1,20 @@
 // Include gulp
-var gulp = require('gulp');
+var gulp = require('gulp'),
+//sass = require('gulp-sass'),
+less = require('gulp-less'),
+autoprefixer = require('gulp-autoprefixer'),
+inline = require('gulp-mc-inliner'),
+browserSync = require('browser-sync'),
+reload = browserSync.reload,
+inlinesource = require('gulp-inline-source'),
+util = require('gulp-util'),
+nodemailer = require('nodemailer'),
+fs = require('fs'),
+html_strip = require('htmlstrip-native'),
+//Include config file
+config = require('./config.json');
 
-// Include Our Plugins
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var inline = require('gulp-mc-inliner');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var inlinesource = require('gulp-inline-source');
-var util = require('gulp-util');
-var nodemailer = require('nodemailer');
-var fs = require('fs');
-var html_strip = require('htmlstrip-native');
-
-// Include the config
-var config = require('./config.json');
-
-
+/*
 // Compile Our Sass
 gulp.task('sass', function() {
     return gulp.src('src/scss/*.scss')
@@ -25,6 +23,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('src/css'))
     .pipe(reload({stream:true}));
 });
+*/
 
 // BrowserSync
 gulp.task('browser-sync', function() {
@@ -34,7 +33,7 @@ gulp.task('browser-sync', function() {
             index: "test-template.html"
         },
         open: "external",
-        logPrefix: "Gulp Email Creator"
+        logPrefix: "MailGrid"
     });
 });
 
@@ -49,7 +48,8 @@ gulp.task('build', function() {
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    gulp.watch('src/scss/*.scss', ['sass']);
+    //gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/less/*.less', ['less']);
     gulp.watch('src/html/*.html', ['build']);
     gulp.watch('src/css/*.css', ['build']);
 });

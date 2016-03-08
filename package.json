@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darylldoyle/Gulp-Email-Creator.git"
+    "url": "git+https://github.com/rapidwebltd/MailGrid.git"
   },
   "keywords": [
     "GulpJS",
     "Email"
   ],
-  "author": "Daryll Doyle",
+  "author": "Rapid Web Ltd",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/darylldoyle/Gulp-Email-Creator/issues"
+    "url": "https://github.com/rapidwebltd/MailGrid/issues"
   },
-  "homepage": "https://github.com/darylldoyle/Gulp-Email-Creator",
+  "homepage": "https://github.com/rapidwebltd/MailGrid",
   "devDependencies": {
     "browser-sync": "^1.8.1",
     "gulp": "^3.8.10",
@@ -27,7 +27,6 @@
     "gulp-inline-source": "^1.1.0",
     "gulp-less": "^3.0.5",
     "gulp-mc-inliner": "0.0.4",
-    "gulp-sass": "^1.2.4",
     "gulp-util": "^3.0.3",
     "htmlstrip-native": "^0.1.1",
     "mailchimp": "^1.1.0",
