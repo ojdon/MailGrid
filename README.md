@@ -18,10 +18,10 @@ You will need to get a Mailchimp API by creating one in your Mailchimp account. 
 
 # Using the package
 
-You can use the MailGrid by creating your HTML in the `./src/html/` directory and your LESS/SCSS in the `./src/less` or `./src/scss/` directory.
+You can use the MailGrid by creating your HTML in the `./src/html/` directory and your LESS in the `./src/less` directory.
 
 ## Compile Templates
-Running `gulp` from the terminal will build the new HTML email template into the `./output/` directory and the proceed to watch `./src/html/` and `./src/less/` or`./src/scss/` for any updates.
+Running `gulp` from the terminal will build the new HTML email template into the `./output/` directory and the proceed to watch `./src/html/` and `./src/less/` for any updates.
 
 The gulpfile has browsersync built in and will reload on any HTML or CSS edit, allowing you to focus on your code.
 
