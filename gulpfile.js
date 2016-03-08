@@ -1,49 +1,25 @@
 // Include gulp
 var gulp = require('gulp'),
-//sass = require('gulp-sass'),
 less = require('gulp-less'),
+LessPluginCleanCSS = require('less-plugin-clean-css'),
 autoprefixer = require('gulp-autoprefixer'),
 inline = require('gulp-mc-inliner'),
-browserSync = require('browser-sync'),
-reload = browserSync.reload,
 inlinesource = require('gulp-inline-source'),
 util = require('gulp-util'),
 nodemailer = require('nodemailer'),
 fs = require('fs'),
 html_strip = require('htmlstrip-native'),
+cleancss = new LessPluginCleanCSS({ advanced: true, keepSpecialComments: 0 }),
+path = require('path'),
 //Include config file
 config = require('./config.json');
-
-/*
-// Compile Our Sass
-gulp.task('sass', function() {
-    return gulp.src('src/scss/*.scss')
-    .pipe(sass({errLogToConsole: true}))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('src/css'))
-    .pipe(reload({stream:true}));
-});
-*/
-
-// BrowserSync
-gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./output",
-            index: "test-template.html"
-        },
-        open: "external",
-        logPrefix: "MailGrid"
-    });
-});
 
 // Build our templates
 gulp.task('build', function() {
     return gulp.src('src/html/*.html')
         .pipe(inlinesource())
         .pipe(inline(config.APIKEY, false))
-        .pipe(gulp.dest('./output'))
-        .pipe(reload({stream:true}));
+        .pipe(gulp.dest('./output'));
 });
 
 /*Compile LESS*/
@@ -53,19 +29,18 @@ gulp.task('less', function() {
           paths: [ path.join(__dirname, 'less', 'includes') ],
           plugins: [cleancss]
         }))
-        .pipe(gulp.dest(css_dir));
+        .pipe(gulp.dest('src/css'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-    //gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/less/*.less', ['less']);
     gulp.watch('src/html/*.html', ['build']);
     gulp.watch('src/css/*.css', ['build']);
 });
 
 // Default Task
-gulp.task('default', ['sass', 'browser-sync', 'build', 'watch']);
+gulp.task('default', ['less', 'build', 'watch']);
 
 // Add ability to send test emails
 gulp.task('send', function () {
