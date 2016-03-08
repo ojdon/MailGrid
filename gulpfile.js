@@ -46,6 +46,16 @@ gulp.task('build', function() {
         .pipe(reload({stream:true}));
 });
 
+/*Compile LESS*/
+gulp.task('less', function() {
+    return gulp.src('src/less/*.less')
+        .pipe(less({
+          paths: [ path.join(__dirname, 'less', 'includes') ],
+          plugins: [cleancss]
+        }))
+        .pipe(gulp.dest(css_dir));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
     //gulp.watch('src/scss/*.scss', ['sass']);
