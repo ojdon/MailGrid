@@ -41,8 +41,8 @@ You can now throw your emails straight into [Litmus](http://litmus.com/) tests. 
 ```javascript
 gulp litmus --template="compiled-template-name.html"
 ```
-In a few seconds/minutes, you'll see the test appear in Limus for you!
+In a few seconds/minutes, you'll see the test appear in Litmus for you!
 
-#Contributing#
+# Contributing
 
-Any contributions will be happily recieved. Just open an issue or make a pull request. However, please consider if your contributions would be more suitable upstream. 
+Any contributions will be happily received. Just open an issue or make a pull request. However, please consider if your contributions would be more suitable upstream. 
