@@ -45,4 +45,4 @@ In a few seconds/minutes, you'll see the test appear in Litmus for you!
 
 # Contributing
 
-Any contributions will be happily received. Just open an issue or make a pull request. However, please consider if your contributions would be more suitable upstream. 
+Any contributions will be happily received. Simply open a [new issue](https://github.com/rapidwebltd/MailGrid/issues) or create a new [pull request](https://github.com/rapidwebltd/MailGrid/pulls). However, please consider if your contributions would be more suitable upstream. 
