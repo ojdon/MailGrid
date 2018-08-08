@@ -1,7 +1,7 @@
 ![MailGrid](http://rapidwebspace.com/MailGrid/logo-dark.png)
 ==========
 
-Our new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) great work!
+A new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) great work!
 
 # Installation
 
@@ -34,7 +34,7 @@ To run this, you can use the following command
 gulp send --template="compiled-template-name.html"
 ```
 
-##Testing
+## Testing
 
 You can now throw your emails straight into [Litmus](http://litmus.com/) tests. You'll need an active [Litmus](http://litmus.com/) account and to get your [static email](https://litmus.com/static-email). Plug this into the `config.json` file and then run the following command.
 
