@@ -1,7 +1,7 @@
 ![MailGrid](http://rapidwebspace.com/MailGrid/logo-dark.png)
 ==========
 
-A new responsive email workflow that is a fork from [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) great work!
+A new responsive email workflow based on [Daryll Doyle's](https://github.com/darylldoyle/Gulp-Email-Creator) great work!
 
 # Installation
 
